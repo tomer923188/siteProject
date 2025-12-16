@@ -1,4 +1,4 @@
-/* Reset default styles */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,21 +6,23 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   line-height: 1.6;
+  background: #f7f9f7;
+  color: #333;
 }
 
 .container {
   width: 90%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
 }
 
 /* Header */
-header {
+.header {
   background: #529655;
-  color: #fff;
-  padding: 0px 0;
+  padding: 15px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .header__wrap {
@@ -29,55 +31,113 @@ header {
   justify-content: space-between;
 }
 
-.nav__wrap {
+.logo {
   display: flex;
-  justify-content: left;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-weight: bold;
 }
 
-header h1 {
-  margin-bottom: 10px;
+.logo img {
+  width: 50px;
 }
 
-nav ul {
+.header__menu ul {
   list-style: none;
   display: flex;
-  gap: 15px;
+  gap: 20px;
 }
 
-nav a {
-  color: #fff;
+.header__menu a {
+  color: white;
   text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.header__menu a:hover {
+  color: #e0ffe4;
 }
 
 /* Sections */
 .section {
-  padding: 40px 0;
+  padding: 70px 0;
+  text-align: center;
 }
 
-.section:nth-child(even) {
-  background: #f4f4f4;
+.section h2 {
+  margin-bottom: 15px;
+  color: #529655;
+}
+
+.section p {
+  max-width: 600px;
+  margin: auto;
+}
+
+.section.alt {
+  background: #eef5ef;
+}
+
+.hero img {
+  margin-top: 30px;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 /* Footer */
-footer {
-  background: #666;
-  color: #fff;
+.footer {
+  background: #2f3e34;
+  color: white;
+  padding: 50px 0 20px;
+}
+
+.footer__wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.footer__col img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.footer__col h4 {
+  margin-bottom: 10px;
+  color: #9ee6b2;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.social {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social img {
+  width: 32px;
+  transition: 0.3s;
+}
+
+.social img:hover {
+  transform: scale(1.2);
+}
+
+.copyright {
   text-align: center;
-  padding: 20px 0;
+  margin-top: 20px;
+  font-size: 0.9em;
+  opacity: 0.8;
 }
 
-img {
-  max-width: 100%;
-  width: 100px;
-  height: 100px;
-  height: auto;
-}
-
-img.logo {
-  width: 100px;
-  height: 100px;
-}
