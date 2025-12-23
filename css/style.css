@@ -20,7 +20,7 @@ body {
 
 /* Header */
 .header {
-  background: #529655;
+  background: #222222;
   padding: 15px 0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
@@ -89,7 +89,7 @@ body {
 
 /* Footer */
 .footer {
-  background: #2f3e34;
+  background: #222222;
   color: white;
   padding: 50px 0 20px;
 }
@@ -141,3 +141,27 @@ body {
   opacity: 0.8;
 }
 
+.services__warp{
+  display: flex;
+  margin-top: 50px;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.services__item{
+  border-radius: 5px;
+  width: 350px;
+  min-height: 250px;
+  flex-basis: calc(33.333% - 34px);
+}
+
+.services__item img{
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.services__item p{
+  margin-top: 15px;
+}
