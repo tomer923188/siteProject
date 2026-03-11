@@ -1,34 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="javascriptFun.css">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-<head>
-    <title>className Example</title>
-    <style>
-        .red { color: red; }
-        .blue { color: blue; }
-        .green {color: green;}
-    </style>
-  </head>
-  <body>
-    <div class="items">
-      <p class="parag">This is the first paragraph.</p>
-      <p class="parag">This is the second paragraph.</p>
-      <p class="parag">This is the third paragraph.</p>
-    </div>
-    
-    <button onClick="changeColor('red')">Make Red</button>
-    <button onClick="changeColor('blue')">Make Blue</button>
-    <button onClick="changeColor('green')">Make Green</button>
 
-      <script>
-          function changeColor(color) {
-             
-          }
-      </script>
-      <script src = "javascript.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript Tasks</title>
+  <link rel="stylesheet" href="javascriptFun.css">
+</head>
+
+<body class="javaScriptFun whiteTheme">
+
+  <div id="jsWrap">
+
+    <h2>task 1</h2>
+
+    <div id="items">
+      <p>first</p>
+      <p>second</p>
+      <p>third</p>
+    </div>
+
+    <div class="buttons">
+      <button onclick="setItemColor('red')">red</button>
+      <button onclick="setItemColor('green')">green</button>
+      <button onclick="setItemColor('blue')">blue</button>
+    </div>
+
+    <br>
+
+
+    <h3>task 2</h3>
+    <p>This is a sample paragraph.</p>
+    <button onclick="switchTheme()">Toggle Theme</button>
+
+  </div>
+
+  <br>
+
+  <h3>task 3</h3>
+  <img id="larry" src="images/larry.svg.png" alt="larry">
+
+  <br><br>
+
+  <button onclick="hideLarry()">press to hide larry</button>
+  <button onclick="showLarry()">press to bring larry back</button>
+
+  <br><br>
+
+  <div class="tabsChange">
+
+    <h2>task 5</h2>
+
+    <div class="tabs">
+      <button class="tab" onclick="openTab(0)">Tab 1</button>
+      <button class="tab" onclick="openTab(1)">Tab 2</button>
+      <button class="tab" onclick="openTab(2)">Tab 3</button>
+    </div>
+
+    <p id="tabsText"></p>
+
+  </div>
+
+  <br>
+
+  <div class="addOrRemoveRed">
+
+    <h2>task 6</h2>
+
+    <div class="objecs">
+      <p class="noRed" onclick="toggleRed(this)">word thing</p>
+      <p class="noRed" onclick="toggleRed(this)">now thing ik</p>
+      <p class="noRed" onclick="toggleRed(this)">waijdjj</p>
+      <p class="noRed" onclick="toggleRed(this)">18udjhif</p>
+    </div>
+
+  </div>
+
+  <script src="javascript.js"></script>
+
+</body>
+
 </html>

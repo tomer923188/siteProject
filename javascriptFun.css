@@ -1,0 +1,105 @@
+.javaScriptFun {
+  font-family: Arial, sans-serif;
+  margin: 30px;
+}
+
+#jsWrap {
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.buttons button {
+  font-size: 16px;
+  padding: 8px 14px;
+  margin: 5px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  transform: scale(1.05);
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.blue {
+  color: blue;
+}
+
+.whiteTheme {
+  background-color: white;
+  color: black;
+}
+
+.blackTheme {
+  background-color: #111;
+  color: white;
+}
+
+.tabs button {
+  font-size: 16px;
+  margin: 5px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.tabs button:hover {
+  background-color: #ddd;
+}
+
+#tabsText {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+#larry {
+  width: 150px;
+  margin: 15px 0;
+}
+
+.objecs p {
+  font-size: 18px;
+  cursor: pointer;
+  display: inline;
+}
+
+.objecs p:not(:last-child)::after {
+  content: ", ";
+}
+
+.noRed {
+  color: black;
+}
+
+.yesRed {
+  color: red;
+}
+
+.hoverBox {
+  width: 120px;
+  height: 120px;
+  background-color: grey;
+  margin-top: 15px;
+}
+
+.blackTheme .noRed {
+  color: white;
+}
+
+#items p {
+  display: inline;
+}
+
+#items p:not(:last-child)::after {
+  content: ", ";
+}

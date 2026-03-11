@@ -40,3 +40,5 @@ function out()
 {
     h2.style.textDecoration = "none"
 }
+
+function tabTexts
