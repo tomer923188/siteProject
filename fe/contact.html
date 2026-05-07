@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      .contact-box {
+        max-width: 700px;
+        margin: 40px auto;
+        padding: 30px;
+        background: #f5f5f5;
+        border-radius: 12px;
+      }
+
+      .contact-box h2 {
+        margin-bottom: 20px;
+      }
+
+      .contact-info p {
+        margin: 10px 0;
+      }
+
+      .social-links a {
+        margin-right: 15px;
+        text-decoration: none;
+        color: blue;
+      }
+
+      form {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      form input,
+      form textarea {
+        margin-bottom: 15px;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+      }
+
+      form textarea {
+        resize: vertical;
+        min-height: 120px;
+      }
+
+      form button {
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        background: black;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      form button:hover {
+        opacity: 0.9;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="header__wrap">
+          
+
+          <div class="nav__wrap">
+            <nav>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="contact-box">
+          <h2>Contact Us</h2>
+
+          <div class="contact-info">
+            <p><strong>Email:</strong> myemail@mail.com</p>
+            <p><strong>Phone:</strong> +1 123-456-7890</p>
+
+            <div class="social-links">
+              <a href="#">Facebook</a>
+              <a href="#">Instagram</a>
+              <a href="#">LinkedIn</a>
+            </div>
+          </div>
+
+          <form id="contactForm">
+            <input
+              type="text"
+              id="fullname"
+              placeholder="Full Name"
+            />
+
+            <input
+              type="email"
+              id="email"
+              placeholder="Email Address"
+            />
+
+            <input
+              type="text"
+              id="phone"
+              placeholder="Phone Number"
+            />
+
+            <input
+              type="text"
+              id="subject"
+              placeholder="Message Subject"
+            />
+
+            <textarea
+              id="message"
+              placeholder="Write your message here..."
+            ></textarea>
+
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© 2025 My Website. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const form = document.getElementById("contactForm");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const fullname = document.getElementById("fullname").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const subject = document.getElementById("subject").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        const phonePattern = /^[0-9]{10,}$/;
+
+        if (fullname.length < 3) {
+          alert("Full name must be at least 3 characters.");
+          return;
+        }
+
+        if (!email.match(emailPattern)) {
+          alert("Please enter a valid email address.");
+          return;
+        }
+
+        if (!phone.match(phonePattern)) {
+          alert("Phone number must contain at least 10 digits.");
+          return;
+        }
+
+        if (subject.length < 5) {
+          alert("Subject must be at least 5 characters.");
+          return;
+        }
+
+        if (message.length < 10) {
+          alert("Message must be at least 10 characters.");
+          return;
+        }
+
+        alert("Message sent successfully!");
+        form.reset();
+      });
+    </script>
+  </body>
+</html>
