@@ -1,190 +1,130 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
     <link rel="stylesheet" href="css/style.css" />
-
-    <style>
-      .contact-box {
-        max-width: 700px;
-        margin: 40px auto;
-        padding: 30px;
-        background: #f5f5f5;
-        border-radius: 12px;
-      }
-
-      .contact-box h2 {
-        margin-bottom: 20px;
-      }
-
-      .contact-info p {
-        margin: 10px 0;
-      }
-
-      .social-links a {
-        margin-right: 15px;
-        text-decoration: none;
-        color: blue;
-      }
-
-      form {
-        margin-top: 30px;
-        display: flex;
-        flex-direction: column;
-      }
-
-      form input,
-      form textarea {
-        margin-bottom: 15px;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        font-size: 16px;
-      }
-
-      form textarea {
-        resize: vertical;
-        min-height: 120px;
-      }
-
-      form button {
-        padding: 12px;
-        border: none;
-        border-radius: 8px;
-        background: black;
-        color: white;
-        font-size: 16px;
-        cursor: pointer;
-      }
-
-      form button:hover {
-        opacity: 0.9;
-      }
-    </style>
   </head>
 
   <body>
-    <header>
-      <div class="container">
-        <div class="header__wrap">
-          
 
-          <div class="nav__wrap">
-            <nav>
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
-            </nav>
-          </div>
+  <header class="header">
+    <div class="container">
+      <div class="header__wrap">
+        <div class="logo">
+          <img src="images/Tux.png" alt="Logo">
         </div>
+
+        <nav class="header__menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="javascriptFun.html">javascriptFun</a></li>
+          </ul>
+        </nav>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main>
+    <main class = "contact">
       <div class="container">
-        <div class="contact-box">
-          <h2>Contact Us</h2>
+        <div class="form__wrap">
+          <div class="title_form">
+            Contact me
+            <img src="images/contact.png" alt="">
 
-          <div class="contact-info">
-            <p><strong>Email:</strong> myemail@mail.com</p>
-            <p><strong>Phone:</strong> +1 123-456-7890</p>
-
-            <div class="social-links">
-              <a href="#">Facebook</a>
-              <a href="#">Instagram</a>
-              <a href="#">LinkedIn</a>
+            <div class="form_input">
+              <div class="input">
+                <input type="text" id="fname" name="fname" placeholder="first name" required>                
+              </div>
+              <div class="input">
+                <input type = "text" id="lname" name="lname" placeholder="last name" required>
+              </div>
+              <div class="input">
+                <input type = "email" id = "email" name = "email" placeholder="your email" required>
+              </div>
+              <div class="input">
+                <input type = "tel" id = "phone_number" name = "phone_number" placeholder="phone number" required>
+              </div>
+              <div class="input">
+                <input type="text" id = "subjectMsg" name = "subjectMsg" placeholder="subject msg" required>
+              </div>
+              <div class="input">
+                <textarea id = "msg" name = "msg" rows=  "4" cols = "30" placeholder="enter your msg here..."></textarea>
+              </div>
             </div>
-          </div>
-
-          <form id="contactForm">
-            <input
-              type="text"
-              id="fullname"
-              placeholder="Full Name"
-            />
-
-            <input
-              type="email"
-              id="email"
-              placeholder="Email Address"
-            />
-
-            <input
-              type="text"
-              id="phone"
-              placeholder="Phone Number"
-            />
-
-            <input
-              type="text"
-              id="subject"
-              placeholder="Message Subject"
-            />
-
-            <textarea
-              id="message"
-              placeholder="Write your message here..."
-            ></textarea>
-
-            <button type="submit">Send Message</button>
           </form>
+
+            <div class="sumbit_button">
+              <button id="submitButton" type="submit">Submit</button>
+            </div>
+
+            <div class="contactDownWrap">
+              <div class="phoneAndEmail">
+                <br>
+                  <div class="contactInfo">My email: email@email.com</div>
+                  <div class="contactInfo">My phone number: 052198350</div>
+              </div>
+
+              <div class="contactLinks">
+                <div class="link"><a href="https://signal.com"><img src="images/signal.png" alt="" width="50px"></a></div>
+                <div class="link"><a href="https://github.com/"><img src="images/github.svg.png" alt="" width="50px"></a></div>
+                <div class="link"><a href="https://gentoo.org"><img src="images/gentoo-signet.png" alt="" width="50px"> </a></div>
+              </div>
+            </div>
         </div>
       </div>
     </main>
 
-    <footer>
-      <div class="container">
-        <p>© 2025 My Website. All rights reserved.</p>
+
+  <footer class="footer">
+    <div class="container footer__wrap">
+      <div class="footer__wrap">
+        <div class="footer__col">
+          <img src="images/Tux.png" alt="Logo">
+          <br>
+        </div>
       </div>
-    </footer>
 
-    <script>
-      const form = document.getElementById("contactForm");
+      <div class="footer__col">
+        <h4>Menu</h4>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
 
-      form.addEventListener("submit", function (event) {
-        event.preventDefault();
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <p>Email: myemail@mail.com</p>
+        <p>Phone: +1 123-123-2354</p>
 
-        const fullname = document.getElementById("fullname").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const phone = document.getElementById("phone").value.trim();
-        const subject = document.getElementById("subject").value.trim();
-        const message = document.getElementById("message").value.trim();
+        <div class="social">
+          <a href="https://gentoo.org" target="_blank">
+            <img src="images/gentoo-signet.png" alt="Instagram">
+          </a>
+          <a href="https://github.com/" target="_blank">
+            <img src="images/github.svg.png" alt="WhatsApp">
+          </a>
+          <a href="https://signal.org" target="_blank">
+            <img src="images/signal.png" alt="Arch Linux">
+          </a>
+        </div>
+      </div>
 
-        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-        const phonePattern = /^[0-9]{10,}$/;
+    </div>
 
-        if (fullname.length < 3) {
-          alert("Full name must be at least 3 characters.");
-          return;
-        }
 
-        if (!email.match(emailPattern)) {
-          alert("Please enter a valid email address.");
-          return;
-        }
 
-        if (!phone.match(phonePattern)) {
-          alert("Phone number must contain at least 10 digits.");
-          return;
-        }
-
-        if (subject.length < 5) {
-          alert("Subject must be at least 5 characters.");
-          return;
-        }
-
-        if (message.length < 10) {
-          alert("Message must be at least 10 characters.");
-          return;
-        }
-
-        alert("Message sent successfully!");
-        form.reset();
-      });
-    </script>
+    <p class="copyright">
+      © This site is licensed under the GNU General Public License v3.0.
+    </p>
+  </footer>    <script src="main.js"></script>
   </body>
 </html>
