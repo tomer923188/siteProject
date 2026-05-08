@@ -2,17 +2,12 @@ name: Deploy Frontend to Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
 
 permissions:
   contents: read
   pages: write
   id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
 
 jobs:
   deploy:
@@ -23,31 +18,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-          cache-dependency-path: fe/package-lock.json
-
-      - name: Install dependencies
-        working-directory: fe
-        run: npm ci
-
-      - name: Build frontend
-        working-directory: fe
-        run: npm run build
-
-      - name: Setup GitHub Pages
+      - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      - name: Upload Pages artifact
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ../fe/
+          path: './fe'
 
       - name: Deploy to GitHub Pages
         id: deployment
