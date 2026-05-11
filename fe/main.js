@@ -72,11 +72,21 @@ submitButton.addEventListener("click", () => {
         alert("Ilegal email!");
         validEmail = false
     }
-
+    
+    let doesItHaveLetters = false;
     const phone = document.querySelector("#phone_number").value;
     if (phone.length > 10)
     {
         alert("the phone number is too long!");
+        validPhone = false
+    }
+    else if (isNaN(phone)) {
+        alert("The phone number cant have letters");
+    } 
+
+    if (phone.length < 10)
+    {
+        alert("the phone number is too short!");
         validPhone = false
     }
     const subjectMsg = document.querySelector("#subjectMsg").value;

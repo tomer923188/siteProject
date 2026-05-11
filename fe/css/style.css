@@ -162,7 +162,7 @@ body {
 }
 
 .contact {
-  background: linear-gradient(135deg, white, #1b1b1b);
+  background: grey;
   min-height: 100vh;
   padding: 80px 20px;
   display: flex;
@@ -185,7 +185,7 @@ body {
   background: #ffffff;
   border-radius: 0px;
   padding: 50px;
-  border: 3px solid #3b82f6;
+  border: 3px solid black;
   transition: 0.3s ease;
 }
 
@@ -203,7 +203,7 @@ body {
   content: "";
   width: 80px;
   height: 4px;
-  background: #3b82f6;
+  background: black;
   display: block;
   margin: 12px auto 0;
   border-radius: 0px;
@@ -249,7 +249,7 @@ body {
 /* FOCUS EFFECT */
 .contact .form_input input:focus,
 .contact .form_input textarea:focus {
-  border-color: #3b82f6;
+  border-color: black;
   background: white;
 }
 
@@ -272,7 +272,7 @@ body {
   padding: 14px;
   border: none;
   border-radius: 12px;
-  background: #3b82f6;
+  background: black;
   color: white;
   font-size: 17px;
   font-weight: bold;
@@ -282,7 +282,6 @@ body {
 
 /* BUTTON HOVER */
 .contact .sumbit_button button:hover {
-  background: #2563eb;
   transform: scale(1.03);
 }
 
@@ -304,6 +303,11 @@ body {
 }
 
 .contactLinks a:hover {
-  background: #3b82f6;
+  background: black;
   transform: translateY(-2px);
+}
+
+.contact .contactInfo {
+  display: flex;
+  justify-content: center;
 }

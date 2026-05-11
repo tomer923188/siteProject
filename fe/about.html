@@ -1,71 +1,109 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
-  <head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - My Linux Journey</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 
-    <meta charset="UTF-8" />
+<body>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <header class="header">
+    <div class="container">
+      <div class="header__wrap">
+        <div class="logo">
+          <img src="images/Tux.png" alt="Logo">
+        </div>
 
-    <title>About</title>
-
-    <link rel="stylesheet" href="css/style.css" />
-
-  </head>
-
-  <body>
-
-    <header>
-
-      <div class="container">
-
-        <h1>My Website</h1>
-
-        <nav>
-
+        <nav class="header__menu">
           <ul>
-
             <li><a href="index.html">Home</a></li>
-
             <li><a href="about.html">About</a></li>
-
             <li><a href="contact.html">Contact</a></li>
-
+            <li><a href="javascriptFun.html">javascriptFun</a></li>
           </ul>
-
         </nav>
-
       </div>
+    </div>
+  </header>
 
-    </header>
-
-
-
-    <main>
-
+  <main>
+    <section class="section hero">
       <div class="container">
-
-        <h2>About</h2>
-
-        <p>This is the page where you can write information about the website or company.</p>
-
+        <h1>About Me</h1>
+        <p>I am a Linux enthusiast dedicated to the philosophy of free software and system minimalism. This website serves as a documentation of my journey through different distributions and my transition from bloated desktop environments to efficient, tiling window managers.</p>
+        <img src="images/Tux.png" alt="Tux the Penguin" width="200px">
       </div>
+    </section>
 
-    </main>
-
-
-
-    <footer>
-
+    <section class="section">
       <div class="container">
+        <h2>My Philosophy</h2>
+        <p>I believe that the user should have total control over their hardware. That is why I moved from Arch to <strong>Gentoo</strong>—to understand every compilation flag and package that goes into my kernel. For me, computing isn't just about getting things done; it's about knowing <em>how</em> they get done.</p>
+        <br>
+        <h3>My Goal</h3>
+        <p>Through this site, I hope to share my configurations (dots) and help others who are looking to ditch systemd or dive into the world of suckless software like <code>dwm</code> and <code>st</code>.</p>
+      </div>
+    </section>
 
-        <p>© 2025 My Website. All rights reserved.</p>
+    <section class="section alt">
+      <div class="container">
+        <h2>Hardware & Setup</h2>
+        <ul>
+          <li><strong>Main Desktop:</strong> Gentoo Linux (No Systemd)</li>
+          <li><strong>Laptop:</strong> ThinkPad running Artix (OpenRC)</li>
+          <li><strong>Window Manager:</strong> dwm (Custom patched in C)</li>
+          <li><strong>Shell:</strong> Zsh / Bash</li>
+        </ul>
+      </div>
+    </section>
+  </main>
 
+  <footer class="footer">
+    <div class="container footer__wrap">
+      <div class="footer__col">
+        <img src="images/Tux.png" alt="Logo">
+        <br>
       </div>
 
-    </footer>
+      <div class="footer__col">
+        <h4>Menu</h4>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
 
-  </body>
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <p>Email: myemail@mail.com</p>
+        <p>Phone: +1 123-123-2354</p>
+
+        <div class="social">
+          <a href="https://gentoo.org" target="_blank">
+            <img src="images/gentoo-signet.png" alt="Gentoo">
+          </a>
+          <a href="https://github.com/" target="_blank">
+            <img src="images/github.svg.png" alt="GitHub">
+          </a>
+          <a href="https://signal.org" target="_blank">
+            <img src="images/signal.png" alt="Signal">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <p class="copyright">
+      © This site is licensed under the GNU General Public License v3.0.
+    </p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
 
 </html>
