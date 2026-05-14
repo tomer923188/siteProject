@@ -117,8 +117,6 @@ submitButton.addEventListener("click", () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({fname: fname, lname: lname, email: email, phone: phone, subjectMsg: subjectMsg, msg: msg}) 
     })
-
-
     
     .then(res => res.json())
     .then(data => console.log('Server response:', data))
